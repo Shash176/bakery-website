@@ -124,10 +124,31 @@ host. To replace them with real photography:
 placeholder SVGs — it's not used at build time and can be deleted once you've
 swapped in real photos.
 
+## How the order form works
+
+Visitors build up a small cart before sending the order:
+
+1. Pick a product from the dropdown and a quantity, then **Add to Cart**
+   (or click **"Order this"** on a product card, which adds that item
+   straight to the cart). Adding the same product twice just increases its
+   quantity. Each cart line can be adjusted with the **−**/**+** buttons or
+   removed entirely.
+2. Fill in name, phone number, and optionally a pickup/delivery date and
+   notes.
+3. Send the order with either button:
+   - **Submit Order** — emails the bakery via Web3Forms (see below).
+   - **Send Order on WhatsApp** — opens a prefilled WhatsApp chat listing
+     every cart item, its quantity, the total, and the customer's details.
+
+Both buttons validate the same thing: at least one item in the cart, a
+name, and a valid 10-digit Indian mobile number.
+
 ## Turning on real order submissions (Web3Forms)
 
-The order form works in **demo mode** until you add a key — submissions show
-a "Demo mode — order not sent" message instead of emailing anyone.
+The **Submit Order** button works in **demo mode** until you add a key —
+submissions show a "Demo mode — order not sent" message instead of emailing
+anyone. The **Send Order on WhatsApp** button works immediately and doesn't
+need this setup.
 
 1. Create a free account at [web3forms.com](https://web3forms.com) and
    create a form to get an **Access Key**.
@@ -135,16 +156,11 @@ a "Demo mode — order not sent" message instead of emailing anyone.
 3. Commit and push — the next deploy will have live order emails.
 
 Submissions email the bakery with a subject like
-`New order: 2 × Chocolate Truffle Cake — Priya Sharma` and list every field.
-The honeypot field (`company`) is hidden from real visitors via CSS; if a bot
-fills it in, the submission is silently dropped.
-
-## WhatsApp ordering
-
-Independent of Web3Forms, every order form submission also offers an
-**"Order on WhatsApp"** button that opens a prefilled WhatsApp chat to
-`site.json`'s `whatsappNumber`. Update that number any time the bakery's
-WhatsApp line changes — no code changes needed.
+`New order: 2 × Chocolate Truffle Cake — Priya Sharma` (or, for multiple
+products, `New order: 6 items (3 products) — Priya Sharma`), listing every
+cart item, the order total, and the customer's details. The honeypot field
+(`company`) is hidden from real visitors via CSS; if a bot fills it in, the
+submission is silently dropped.
 
 ## How deploys work
 
