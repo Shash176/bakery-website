@@ -2,10 +2,8 @@
 import { defineConfig } from "astro/config";
 
 // Deployed to GitHub Pages as a project site:
-// https://<username>.github.io/bakery-website/
-// `site` and `base` are updated automatically right before the first
-// push once the GitHub username is known (see deploy step in chat).
+// https://Shash176.github.io/bakery-website/
 export default defineConfig({
-  site: "https://your-github-username.github.io",
+  site: "https://Shash176.github.io",
   base: "/bakery-website/",
 });
