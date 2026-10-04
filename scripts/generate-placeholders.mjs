@@ -72,7 +72,7 @@ write(
 
 write(
   "public/images/og-image.svg",
-  gradientSvg({ width: 1200, height: 630, emoji: "🥐", label: "Sweet Crumbs Bakery", seed: seed++ })
+  gradientSvg({ width: 1200, height: 630, emoji: "🥐", label: "Milan Bakers", seed: seed++ })
 );
 
 console.log("Done generating placeholder images.");

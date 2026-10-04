@@ -1,4 +1,4 @@
-# Sweet Crumbs Bakery — Website
+# Milan Bakers — Website
 
 A fast, mobile-first marketing site for a bakery, built with [Astro](https://astro.build).
 No backend, no database — all content lives in a few JSON files and the site is
@@ -183,12 +183,12 @@ cPanel host, etc.
 **Custom domain on GitHub Pages:**
 
 1. In the repo, go to **Settings → Pages → Custom domain** and enter your
-   domain (e.g. `www.sweetcrumbsbakery.in`).
+   domain (e.g. `www.milanbakers.in`).
 2. At your domain registrar, add a `CNAME` record pointing
    `www` → `<username>.github.io` (or `A` records to GitHub's IPs for an
    apex domain — see [GitHub's custom domain docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)).
 3. Once the domain is verified, set `base: "/"` and `site:
-   "https://www.sweetcrumbsbakery.in"` in `astro.config.mjs`, commit, and
+   "https://www.milanbakers.in"` in `astro.config.mjs`, commit, and
    push.
 
 **Moving to another host (Netlify/Vercel/own server):**

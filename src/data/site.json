@@ -1,11 +1,11 @@
 {
-  "name": "Sweet Crumbs Bakery",
+  "name": "Milan Bakers",
   "tagline": "Freshly baked happiness, every single day",
   "description": "Handcrafted breads, cakes and pastries baked fresh every morning in Jaipur. Order online for pickup or home delivery.",
   "phoneDisplay": "+91 98765 43210",
   "phoneDial": "+919876543210",
   "whatsappNumber": "919876543210",
-  "email": "hello@sweetcrumbsbakery.in",
+  "email": "hello@milanbakers.in",
   "address": {
     "line1": "12, Civil Lines Market",
     "line2": "Near Central Park",
@@ -20,8 +20,8 @@
     { "days": "Sunday", "time": "9:00 AM – 2:00 PM" }
   ],
   "social": {
-    "instagram": "https://instagram.com/sweetcrumbsbakery",
-    "facebook": "https://facebook.com/sweetcrumbsbakery",
+    "instagram": "https://instagram.com/milanbakers",
+    "facebook": "https://facebook.com/milanbakers",
     "whatsapp": "https://wa.me/919876543210"
   },
   "web3formsAccessKey": "",
