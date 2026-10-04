@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Fresh Breads">
+  <defs>
+    <linearGradient id="g0" gradientTransform="rotate(0)">
+      <stop offset="0%" stop-color="#FBF1E4"/>
+      <stop offset="100%" stop-color="#F0DAB8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g0)"/>
+  <circle cx="1248" cy="198" r="198" fill="#C1663B" opacity="0.12"/>
+  <circle cx="224.00000000000003" cy="774" r="270" fill="#6B4226" opacity="0.08"/>
+  <text x="50%" y="46%" text-anchor="middle" font-size="288" dominant-baseline="middle">🍞</text>
+  <text x="50%" y="819" text-anchor="middle" font-family="Georgia, 'Playfair Display', serif" font-size="67.5" fill="#3E2723" opacity="0.75">Fresh Breads</text>
+</svg>

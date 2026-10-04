@@ -1,0 +1,69 @@
+---
+import site from "../data/site.json";
+
+const base = import.meta.env.BASE_URL;
+const yearsRunning = new Date().getFullYear() - site.foundedYear;
+---
+
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div class="about-image">
+      <img src={`${base}images/about.svg`} alt={`The team at ${site.name} at work in the kitchen`} loading="lazy" width="900" height="700" />
+    </div>
+    <div class="about-copy">
+      <span class="section-eyebrow">Our Story</span>
+      <h2>Baking with love since {site.foundedYear}</h2>
+      <p>
+        {site.name} started as a tiny home kitchen in {site.address.city}, selling bread
+        to neighbours and friends. {yearsRunning}+ years on, we still bake everything by
+        hand, in small batches, using simple ingredients and no shortcuts — just the way
+        we'd want our own family to eat.
+      </p>
+      <p>
+        Every loaf, cake and pastry that leaves our kitchen is made fresh that day. If we
+        wouldn't serve it to our own family, it doesn't leave the oven.
+      </p>
+      <ul class="about-highlights">
+        <li>🌾 Baked fresh every single day</li>
+        <li>🧈 Real butter, no preservatives</li>
+        <li>🎉 Custom cakes for every occasion</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .about-image img {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    width: 100%;
+    aspect-ratio: 9 / 7;
+    object-fit: cover;
+  }
+
+  .about-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+    font-weight: 700;
+    color: var(--color-brown-700);
+  }
+
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .about-image {
+      order: -1;
+    }
+  }
+</style>

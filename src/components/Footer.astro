@@ -1,0 +1,120 @@
+---
+import site from "../data/site.json";
+
+const currentYear = new Date().getFullYear();
+
+const quickLinks = [
+  { href: "#about", label: "About" },
+  { href: "#products", label: "Menu" },
+  { href: "#order", label: "Order" },
+  { href: "#contact", label: "Contact" },
+];
+
+const socialLinks = [
+  { href: site.social.instagram, label: "Instagram", icon: "📷" },
+  { href: site.social.facebook, label: "Facebook", icon: "📘" },
+  { href: site.social.whatsapp, label: "WhatsApp", icon: "💬" },
+];
+---
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="footer-brand">{site.name}</p>
+      <p class="footer-tagline">{site.tagline}</p>
+    </div>
+
+    <nav aria-label="Footer navigation">
+      <p class="footer-heading">Quick Links</p>
+      <ul>
+        {quickLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
+      </ul>
+    </nav>
+
+    <div>
+      <p class="footer-heading">Follow Us</p>
+      <ul class="social-list">
+        {
+          socialLinks.map((social) => (
+            <li>
+              <a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
+                <span aria-hidden="true">{social.icon}</span> {social.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>&copy; {currentYear} {site.name}. All rights reserved.</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--color-brown-900);
+    color: #f0e3d4;
+    padding-top: 3rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .footer-brand {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.3rem;
+  }
+
+  .footer-tagline {
+    color: #d8c3ab;
+    margin: 0;
+  }
+
+  .footer-heading {
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .site-footer nav ul,
+  .social-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .site-footer a {
+    color: #f0e3d4;
+  }
+
+  .site-footer a:hover {
+    color: #fff;
+  }
+
+  .footer-bottom {
+    padding: 1.25rem 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #d8c3ab;
+  }
+
+  @media (max-width: 640px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+  }
+</style>

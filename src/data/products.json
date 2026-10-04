@@ -1,0 +1,122 @@
+[
+  {
+    "id": "sourdough-classic",
+    "name": "Classic Sourdough",
+    "description": "Naturally leavened, crusty on the outside and soft within.",
+    "price": 180,
+    "unit": "per loaf",
+    "category": "Breads",
+    "image": "/images/products/sourdough.svg",
+    "available": true
+  },
+  {
+    "id": "whole-wheat-loaf",
+    "name": "Whole Wheat Loaf",
+    "description": "A soft, everyday loaf made with 100% whole wheat flour.",
+    "price": 120,
+    "unit": "per loaf",
+    "category": "Breads",
+    "image": "/images/products/whole-wheat.svg",
+    "available": true
+  },
+  {
+    "id": "garlic-baguette",
+    "name": "Garlic Baguette",
+    "description": "Crisp French baguette brushed with garlic butter and herbs.",
+    "price": 150,
+    "unit": "per piece",
+    "category": "Breads",
+    "image": "/images/products/baguette.svg",
+    "available": false
+  },
+  {
+    "id": "chocolate-truffle-cake",
+    "name": "Chocolate Truffle Cake",
+    "description": "Rich chocolate sponge layered with silky chocolate ganache.",
+    "price": 650,
+    "unit": "per kg",
+    "category": "Cakes",
+    "image": "/images/products/chocolate-cake.svg",
+    "available": true
+  },
+  {
+    "id": "red-velvet-cake",
+    "name": "Red Velvet Cake",
+    "description": "Soft red velvet layers with a tangy cream cheese frosting.",
+    "price": 700,
+    "unit": "per kg",
+    "category": "Cakes",
+    "image": "/images/products/red-velvet.svg",
+    "available": true
+  },
+  {
+    "id": "black-forest-cake",
+    "name": "Black Forest Cake",
+    "description": "Classic chocolate sponge with cherries and fresh whipped cream.",
+    "price": 600,
+    "unit": "per kg",
+    "category": "Cakes",
+    "image": "/images/products/black-forest.svg",
+    "available": true
+  },
+  {
+    "id": "butter-croissant",
+    "name": "Butter Croissant",
+    "description": "Flaky, buttery layers baked golden brown every morning.",
+    "price": 90,
+    "unit": "per piece",
+    "category": "Pastries",
+    "image": "/images/products/croissant.svg",
+    "available": true
+  },
+  {
+    "id": "danish-pastry",
+    "name": "Fruit Danish",
+    "description": "Light pastry topped with seasonal fruit and a sweet glaze.",
+    "price": 110,
+    "unit": "per piece",
+    "category": "Pastries",
+    "image": "/images/products/danish.svg",
+    "available": true
+  },
+  {
+    "id": "veg-puff",
+    "name": "Vegetable Puff",
+    "description": "Spiced vegetable filling wrapped in crisp, flaky pastry.",
+    "price": 45,
+    "unit": "per piece",
+    "category": "Pastries",
+    "image": "/images/products/veg-puff.svg",
+    "available": true
+  },
+  {
+    "id": "choco-chip-cookies",
+    "name": "Choco-Chip Cookies",
+    "description": "Crisp at the edges, chewy in the middle, loaded with chocolate.",
+    "price": 220,
+    "unit": "per box (6 pc)",
+    "category": "Cookies",
+    "image": "/images/products/cookies.svg",
+    "available": true
+  },
+  {
+    "id": "jeera-biscuits",
+    "name": "Jeera Biscuits",
+    "description": "A desi favourite — light, crumbly and lightly spiced with cumin.",
+    "price": 160,
+    "unit": "per box (10 pc)",
+    "category": "Cookies",
+    "image": "/images/products/jeera-biscuits.svg",
+    "available": true
+  },
+  {
+    "id": "filter-coffee",
+    "name": "South Indian Filter Coffee",
+    "description": "Freshly brewed, strong and frothy — made to order.",
+    "price": 60,
+    "unit": "per cup",
+    "category": "Beverages",
+    "image": "/images/products/coffee.svg",
+    "available": false
+  }
+]

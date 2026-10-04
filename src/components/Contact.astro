@@ -1,0 +1,108 @@
+---
+import site from "../data/site.json";
+
+const fullAddress = `${site.address.line1}, ${site.address.line2}, ${site.address.city}, ${site.address.state} ${site.address.pincode}, ${site.address.country}`;
+---
+
+<section class="section section--alt" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-details">
+      <span class="section-eyebrow">Visit Us</span>
+      <h2>Contact &amp; Location</h2>
+
+      <dl class="contact-list">
+        <div class="contact-item">
+          <dt>Address</dt>
+          <dd>{fullAddress}</dd>
+        </div>
+        <div class="contact-item">
+          <dt>Phone</dt>
+          <dd><a href={`tel:${site.phoneDial}`}>{site.phoneDisplay}</a></dd>
+        </div>
+        <div class="contact-item">
+          <dt>WhatsApp</dt>
+          <dd>
+            <a href={`https://wa.me/${site.whatsappNumber}`} target="_blank" rel="noopener noreferrer">
+              Message us on WhatsApp
+            </a>
+          </dd>
+        </div>
+        <div class="contact-item">
+          <dt>Email</dt>
+          <dd><a href={`mailto:${site.email}`}>{site.email}</a></dd>
+        </div>
+        <div class="contact-item">
+          <dt>Hours</dt>
+          <dd>
+            <ul class="hours-list">
+              {site.hours.map((h) => <li><strong>{h.days}:</strong> {h.time}</li>)}
+            </ul>
+          </dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="contact-map">
+      <iframe
+        title={`Map showing the location of ${site.name}`}
+        src={site.mapsEmbedUrl}
+        width="100%"
+        height="100%"
+        style="border:0;"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: stretch;
+  }
+
+  .contact-list {
+    margin: 1.5rem 0 0;
+  }
+
+  .contact-item {
+    margin-bottom: 1.2rem;
+  }
+
+  .contact-item dt {
+    font-weight: 700;
+    color: var(--color-brown-700);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.2rem;
+  }
+
+  .hours-list li {
+    margin-bottom: 0.2rem;
+  }
+
+  .contact-map {
+    min-height: 320px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .contact-map iframe {
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .contact-map {
+      min-height: 260px;
+    }
+  }
+</style>

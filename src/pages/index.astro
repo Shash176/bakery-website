@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import HeroSlider from "../components/HeroSlider.astro";
+import About from "../components/About.astro";
+import Products from "../components/Products.astro";
+import OrderForm from "../components/OrderForm.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+import WhatsAppFloat from "../components/WhatsAppFloat.astro";
+---
+
+<Layout>
+  <div id="top"></div>
+  <Header />
+  <main id="main-content">
+    <HeroSlider />
+    <About />
+    <Products />
+    <OrderForm />
+    <Contact />
+  </main>
+  <Footer />
+  <WhatsAppFloat />
+</Layout>

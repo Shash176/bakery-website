@@ -1,0 +1,202 @@
+---
+import site from "../data/site.json";
+
+const base = import.meta.env.BASE_URL;
+
+const navLinks = [
+  { href: "#about", label: "About" },
+  { href: "#products", label: "Menu" },
+  { href: "#order", label: "Order" },
+  { href: "#contact", label: "Contact" },
+];
+---
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#top" aria-label={`${site.name} — home`}>
+      <img src={`${base}favicon.svg`} alt="" width="36" height="36" />
+      <span class="brand-name">{site.name}</span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <ul>
+        {
+          navLinks.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn-primary btn-sm" href="#order">Order Now</a>
+      <button
+        type="button"
+        class="hamburger"
+        id="hamburger-toggle"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        <span class="visually-hidden">Open menu</span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+  </div>
+
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
+    <ul>
+      {
+        navLinks.map((link) => (
+          <li>
+            <a href={link.href}>{link.label}</a>
+          </li>
+        ))
+      }
+      <li><a class="btn btn-primary" href="#order">Order Now</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(251, 241, 228, 0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--header-height);
+    gap: 1rem;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--color-brown-900);
+  }
+
+  .brand:hover {
+    text-decoration: none;
+  }
+
+  .brand-name {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.15rem;
+  }
+
+  .main-nav ul {
+    display: flex;
+    gap: 1.75rem;
+  }
+
+  .main-nav a {
+    color: var(--color-brown-900);
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+
+  .main-nav a:hover {
+    color: var(--color-accent-dark);
+    text-decoration: none;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+  }
+
+  .hamburger-bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: 0 auto;
+    background: var(--color-brown-900);
+    transition: transform var(--transition), opacity var(--transition);
+  }
+
+  .hamburger[aria-expanded="true"] .hamburger-bar:nth-child(2) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger[aria-expanded="true"] .hamburger-bar:nth-child(3) {
+    opacity: 0;
+  }
+  .hamburger[aria-expanded="true"] .hamburger-bar:nth-child(4) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .mobile-nav {
+    border-top: 1px solid var(--color-border);
+    background: var(--color-cream);
+  }
+
+  .mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.25rem 1.5rem;
+    gap: 0.9rem;
+  }
+
+  .mobile-nav a {
+    display: block;
+    color: var(--color-brown-900);
+    font-weight: 700;
+  }
+
+  @media (max-width: 768px) {
+    .main-nav {
+      display: none;
+    }
+    .hamburger {
+      display: flex;
+    }
+    .header-actions .btn-primary {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.getElementById("hamburger-toggle");
+  const mobileNav = document.getElementById("mobile-nav");
+
+  if (toggle && mobileNav) {
+    toggle.addEventListener("click", () => {
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!expanded));
+      mobileNav.hidden = expanded;
+    });
+
+    mobileNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        toggle.setAttribute("aria-expanded", "false");
+        mobileNav.hidden = true;
+      });
+    });
+  }
+</script>

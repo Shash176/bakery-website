@@ -1,0 +1,45 @@
+---
+import site from "../data/site.json";
+
+const message = encodeURIComponent(`Hi ${site.name}! I have a question about your products.`);
+---
+
+<a
+  class="whatsapp-float"
+  href={`https://wa.me/${site.whatsappNumber}?text=${message}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat with us on WhatsApp"
+>
+  <span aria-hidden="true">💬</span>
+</a>
+
+<style>
+  .whatsapp-float {
+    display: none;
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25d366;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    box-shadow: var(--shadow-md);
+    z-index: 90;
+  }
+
+  .whatsapp-float:hover {
+    text-decoration: none;
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    .whatsapp-float {
+      display: flex;
+    }
+  }
+</style>

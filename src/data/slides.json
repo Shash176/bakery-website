@@ -1,0 +1,26 @@
+[
+  {
+    "id": "slide-1",
+    "image": "/images/slides/slide-bread.svg",
+    "heading": "Baked Fresh, Every Morning",
+    "subheading": "Sourdoughs, baguettes and whole-wheat loaves made with love in small batches.",
+    "buttonText": "See Our Breads",
+    "buttonLink": "#products"
+  },
+  {
+    "id": "slide-2",
+    "image": "/images/slides/slide-cake.svg",
+    "heading": "Celebration Cakes, Made To Order",
+    "subheading": "Tell us the occasion — we'll bake something your family will remember.",
+    "buttonText": "Order Now",
+    "buttonLink": "#order"
+  },
+  {
+    "id": "slide-3",
+    "image": "/images/slides/slide-pastry.svg",
+    "heading": "Flaky Pastries & Cosy Evenings",
+    "subheading": "Pair our croissants and cookies with your favourite cup of chai.",
+    "buttonText": "View Menu",
+    "buttonLink": "#products"
+  }
+]

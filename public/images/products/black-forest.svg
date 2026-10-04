@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450" role="img" aria-label="Black Forest Cake">
+  <defs>
+    <linearGradient id="g8" gradientTransform="rotate(296)">
+      <stop offset="0%" stop-color="#FBF1E4"/>
+      <stop offset="100%" stop-color="#F0DAB8"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#g8)"/>
+  <circle cx="468" cy="99" r="99" fill="#C1663B" opacity="0.12"/>
+  <circle cx="84.00000000000001" cy="387" r="135" fill="#6B4226" opacity="0.08"/>
+  <text x="50%" y="46%" text-anchor="middle" font-size="144" dominant-baseline="middle">🍒</text>
+  <text x="50%" y="409.5" text-anchor="middle" font-family="Georgia, 'Playfair Display', serif" font-size="33.75" fill="#3E2723" opacity="0.75">Black Forest Cake</text>
+</svg>
