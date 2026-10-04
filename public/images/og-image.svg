@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Milan Bakers">
   <defs>
-    <linearGradient id="g16" gradientTransform="rotate(232)">
+    <linearGradient id="g17" gradientTransform="rotate(269)">
       <stop offset="0%" stop-color="#FBF1E4"/>
       <stop offset="100%" stop-color="#F0DAB8"/>
     </linearGradient>
   </defs>
-  <rect width="1200" height="630" fill="url(#g16)"/>
+  <rect width="1200" height="630" fill="url(#g17)"/>
   <circle cx="936" cy="138.6" r="138.6" fill="#C1663B" opacity="0.12"/>
   <circle cx="168.00000000000003" cy="541.8" r="189" fill="#6B4226" opacity="0.08"/>
   <text x="50%" y="46%" text-anchor="middle" font-size="201.6" dominant-baseline="middle">🥐</text>

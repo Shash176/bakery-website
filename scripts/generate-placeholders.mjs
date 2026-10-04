@@ -38,23 +38,24 @@ function write(path, svg) {
 
 const slides = [
   { file: "public/images/slides/slide-bread.svg", emoji: "🍞", label: "Fresh Breads", w: 1600, h: 900 },
-  { file: "public/images/slides/slide-cake.svg", emoji: "🎂", label: "Celebration Cakes", w: 1600, h: 900 },
-  { file: "public/images/slides/slide-pastry.svg", emoji: "🥐", label: "Flaky Pastries", w: 1600, h: 900 },
+  { file: "public/images/slides/slide-cake.svg", emoji: "🫓", label: "Toasts & Biscuits", w: 1600, h: 900 },
+  { file: "public/images/slides/slide-pastry.svg", emoji: "🥐", label: "Khari & Puffs", w: 1600, h: 900 },
 ];
 
 const products = [
-  { file: "public/images/products/sourdough.svg", emoji: "🍞", label: "Classic Sourdough" },
-  { file: "public/images/products/whole-wheat.svg", emoji: "🍞", label: "Whole Wheat Loaf" },
-  { file: "public/images/products/baguette.svg", emoji: "🥖", label: "Garlic Baguette" },
-  { file: "public/images/products/chocolate-cake.svg", emoji: "🍫", label: "Chocolate Truffle Cake" },
-  { file: "public/images/products/red-velvet.svg", emoji: "🍰", label: "Red Velvet Cake" },
-  { file: "public/images/products/black-forest.svg", emoji: "🍒", label: "Black Forest Cake" },
-  { file: "public/images/products/croissant.svg", emoji: "🥐", label: "Butter Croissant" },
-  { file: "public/images/products/danish.svg", emoji: "🍓", label: "Fruit Danish" },
+  { file: "public/images/products/bread.svg", emoji: "🍞", label: "Bread" },
+  { file: "public/images/products/ladi-pav.svg", emoji: "🍞", label: "Ladi Pav" },
+  { file: "public/images/products/bun.svg", emoji: "🥐", label: "Bun Maska" },
+  { file: "public/images/products/toast.svg", emoji: "🫓", label: "Toast" },
+  { file: "public/images/products/masala-toast.svg", emoji: "🫓", label: "Masala Toast" },
+  { file: "public/images/products/jeera-butter.svg", emoji: "🍪", label: "Jeera Butter" },
+  { file: "public/images/products/nan-khatai.svg", emoji: "🍪", label: "Nan Khatai" },
+  { file: "public/images/products/osmania-biscuit.svg", emoji: "🍪", label: "Osmania Biscuit" },
+  { file: "public/images/products/coconut-biscuit.svg", emoji: "🍪", label: "Coconut Biscuit" },
+  { file: "public/images/products/khari.svg", emoji: "🥐", label: "Khari" },
   { file: "public/images/products/veg-puff.svg", emoji: "🥟", label: "Vegetable Puff" },
-  { file: "public/images/products/cookies.svg", emoji: "🍪", label: "Choco-Chip Cookies" },
-  { file: "public/images/products/jeera-biscuits.svg", emoji: "🫓", label: "Jeera Biscuits" },
-  { file: "public/images/products/coffee.svg", emoji: "☕", label: "Filter Coffee" },
+  { file: "public/images/products/cream-roll.svg", emoji: "🥐", label: "Cream Roll" },
+  { file: "public/images/products/fruit-cake.svg", emoji: "🍰", label: "Plain Fruit Cake" },
 ];
 
 let seed = 0;

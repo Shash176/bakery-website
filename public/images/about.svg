@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700" role="img" aria-label="Our Story">
   <defs>
-    <linearGradient id="g15" gradientTransform="rotate(195)">
+    <linearGradient id="g16" gradientTransform="rotate(232)">
       <stop offset="0%" stop-color="#FBF1E4"/>
       <stop offset="100%" stop-color="#F0DAB8"/>
     </linearGradient>
   </defs>
-  <rect width="900" height="700" fill="url(#g15)"/>
+  <rect width="900" height="700" fill="url(#g16)"/>
   <circle cx="702" cy="154" r="154" fill="#C1663B" opacity="0.12"/>
   <circle cx="126.00000000000001" cy="602" r="210" fill="#6B4226" opacity="0.08"/>
   <text x="50%" y="46%" text-anchor="middle" font-size="224" dominant-baseline="middle">👩‍🍳</text>
